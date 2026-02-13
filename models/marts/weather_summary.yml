@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: weather_summary
+    description: Aggregated weather summary data
+    columns:
+      - name: date
+        description: Date of the weather summary
+        data_tests:
+          - not_null
+          - unique
+      - name: temperature_avg
+        description: Average temperature for the day
+      - name: precipitation
+        description: Total precipitation for the day
+      - name: humidity_avg
+        description: Average humidity for the day
+      - name: wind_speed_avg
+        description: Average wind speed for the day

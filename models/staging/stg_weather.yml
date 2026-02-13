@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_weather
+    description: Staging layer for weather data
+    columns:
+      - name: weather_id
+        description: Unique identifier for weather record
+        data_tests:
+          - unique
+          - not_null
+      - name: date
+        description: Date of weather observation
+        data_tests:
+          - not_null
+      - name: temperature
+        description: Temperature in Celsius
+      - name: humidity
+        description: Humidity percentage
+      - name: precipitation
+        description: Precipitation in millimeters
+      - name: wind_speed
+        description: Wind speed in km/h
+      - name: condition
+        description: Weather condition description
